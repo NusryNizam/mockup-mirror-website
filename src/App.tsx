@@ -125,7 +125,11 @@ Join the Telegram community to discuss and collaborate among enthusiasts"
         <div className="title sora">
           Convinced? Why don't you download and see for yourself?
         </div>
-        <Button variant="primary" text="Download Now" />
+        <Button
+          variant="primary"
+          text="Download Now"
+          onClick={handleDownload}
+        />
       </section>
 
       <Spacer height={72} />
