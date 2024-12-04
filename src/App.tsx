@@ -6,8 +6,14 @@ import demoVideo from "./assets/videos/demo.webm";
 import logo from "./assets/logo.svg";
 import Github from "./assets/icons/github.svg";
 import Telegram from "./assets/icons/telegram.svg";
+import { useCallback } from "react";
 
 function App() {
+  const handleDownload = useCallback(() => {
+    window.location.href =
+      "https://github.com/NusryNizam/mockup-mirror-mobile/releases/download/v1.0.0/mockup-mirror-v1.0.0.apk";
+  }, []);
+
   return (
     <div>
       <nav className="nav">
@@ -51,7 +57,11 @@ function App() {
           <Spacer height={24} />
 
           <div className="cta-container">
-            <Button variant="primary" text="Download Now" />
+            <Button
+              variant="primary"
+              text="Download Now"
+              onClick={handleDownload}
+            />
             <Button variant="secondary" text="Watch a Demo" />
           </div>
 
