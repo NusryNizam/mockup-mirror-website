@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(13, 13, 13);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --border: rgb(185, 185, 185);
+  --border-light: rgb(233, 233, 233);
+  --text-primary: rgb(13, 13, 13);
+  --text-secondary: rgb(60, 60, 60);
+  --primary-dark: #1d0240;
+
+  --fs-body: 1rem;
+  --fs-body-small: 0.875rem;
+  --fs-display: 2rem;
+  --fs-title: 1.5rem;
+  --fs-heading: 1rem;
+  --fs-caption: 0.75rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.sora {
+  font-family: "Sora", "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.display {
+  font-size: var(--fs-display);
+  line-height: 130%;
+}
+
+.body-regular {
+  font-size: var(--fs-body);
+}
+
+.body-small {
+  font-size: var(--fs-body-small);
+}
+
+.caption {
+  font-size: var(--fs-caption);
+}
+
+.title {
+  font-size: var(--fs-title);
+  font-family: "Sora", sans-serif;
+}
+
+.heading {
+  font-size: var(--fs-heading);
+  font-family: "Sora", sans-serif;
+}
+
+.light {
+  color: var(--text-secondary);
+}

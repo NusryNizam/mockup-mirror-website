@@ -1,0 +1,24 @@
+.button {
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: Inter;
+  font-weight: 500;
+  min-width: 180px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #6911d4;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
