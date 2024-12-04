@@ -59,8 +59,7 @@ function App() {
 
           <div className="caption light">It's free and open-source</div>
         </div>
-        <div className="image-container">
-          {/* <img src={Demo} /> */}
+        <div className="video-container">
           <video src={demoVideo} autoPlay={true} loop={true} />
         </div>
       </section>

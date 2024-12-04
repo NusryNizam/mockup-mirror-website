@@ -53,10 +53,6 @@
   line-height: 130%;
 }
 
-.image-container {
-  /* overflow: hidden; */
-}
-
 video {
   max-height: 640px;
 }
@@ -74,7 +70,7 @@ video {
     padding: 2rem 2rem;
   }
 
-  .image-container {
+  .video-container {
     width: 100%;
   }
 
