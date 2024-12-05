@@ -1,3 +1,3 @@
 # Mockup Mirror
 
-#### Companion App for Mockup Mirror Penpot Plugin
+#### Landing page for the Mockup Mirror Companion App
