@@ -6,16 +6,40 @@ import demoVideo from "./assets/videos/demo.webm";
 import logo from "./assets/logo.svg";
 import Github from "./assets/icons/github.svg";
 import Telegram from "./assets/icons/telegram.svg";
-import { useCallback } from "react";
+import Close from "./assets/icons/close.svg";
+import { useCallback, useRef } from "react";
+import productDemo from "./assets/videos/product-demo.webm";
+
+const RELEASE_LINK =
+  "https://github.com/NusryNizam/mockup-mirror-mobile/releases/download/v1.0.0-2/mockup-mirror-v1.0.0-2.apk";
 
 function App() {
-  const handleDownload = useCallback(() => {
-    window.location.href =
-      "https://github.com/NusryNizam/mockup-mirror-mobile/releases/download/v1.0.0/mockup-mirror-v1.0.0.apk";
+  const videoDialogRef = useRef<HTMLDialogElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const showDialog = useCallback(() => {
+    videoDialogRef.current?.showModal();
+    videoRef.current?.setAttribute("src", productDemo);
   }, []);
 
   return (
     <div>
+      <dialog ref={videoDialogRef} id="videoDialog">
+        <form method="dialog" style={{ position: "relative" }}>
+          <video
+            ref={videoRef}
+            autoPlay={true}
+            loop={true}
+            controls={true}
+            muted={true}
+            className="product-demo-video"
+          />
+          <button className="icon-button">
+            <img src={Close} width={20} height={20} />
+          </button>
+        </form>
+      </dialog>
+
       <nav className="nav">
         <img src={logo} />
         <div className="socials">
@@ -40,7 +64,7 @@ function App() {
           </a>
         </div>
       </nav>
-      {/* <Spacer height={44} /> */}
+
       <section className="main">
         <div className="wrapper">
           <div className="display sora" role="heading">
@@ -57,12 +81,18 @@ function App() {
           <Spacer height={24} />
 
           <div className="cta-container">
+            <a href={RELEASE_LINK} target="_blank">
+              <Button
+                variant="primary"
+                text="Download Now"
+                style={{ width: "100%" }}
+              />
+            </a>
             <Button
-              variant="primary"
-              text="Download Now"
-              onClick={handleDownload}
+              variant="secondary"
+              text="Watch a Demo"
+              onClick={showDialog}
             />
-            <Button variant="secondary" text="Watch a Demo" />
           </div>
 
           <Spacer height={8} />
@@ -70,7 +100,7 @@ function App() {
           <div className="caption light">It's free and open-source</div>
         </div>
         <div className="video-container">
-          <video src={demoVideo} autoPlay={true} loop={true} />
+          <video src={demoVideo} autoPlay={true} loop={true} muted={true} />
         </div>
       </section>
 
@@ -125,11 +155,9 @@ Join the Telegram community to discuss and collaborate among enthusiasts"
         <div className="title sora">
           Convinced? Why don't you download and see for yourself?
         </div>
-        <Button
-          variant="primary"
-          text="Download Now"
-          onClick={handleDownload}
-        />
+        <a href={RELEASE_LINK} target="_blank">
+          <Button variant="primary" text="Download Now" />
+        </a>
       </section>
 
       <Spacer height={72} />
