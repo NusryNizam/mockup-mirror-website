@@ -1,3 +1,6 @@
 # Mockup Mirror
 
-#### Companion App for Mockup Mirror Penpot Plugin
+#### Landing page for the Mockup Mirror Companion App
+
+
+Mockup Mirror is a Penpot plugin to preview your designs on a real Android device with the help of a Companion App
