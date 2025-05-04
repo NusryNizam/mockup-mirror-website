@@ -11,7 +11,7 @@ import { useCallback, useRef } from "react";
 import productDemo from "./assets/videos/product-demo.webm";
 
 const RELEASE_LINK =
-  "https://github.com/NusryNizam/mockup-mirror-mobile/releases/download/v1.0.0-2/mockup-mirror-v1.0.0-2.apk";
+  "https://github.com/NusryNizam/mockup-mirror-mobile/releases/download/v1.0.1/mockup-mirror-v1.0.1.apk";
 
 function App() {
   const videoDialogRef = useRef<HTMLDialogElement>(null);
