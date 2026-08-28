@@ -140,12 +140,6 @@ No need to create user accounts. Use the application right away"
             description="
 Lightweight and performant Android and web application"
           />
-          <Card
-            icon="Community"
-            heading="Community Support"
-            description="
-Join the Telegram community to discuss and collaborate among enthusiasts"
-          />
         </div>
       </section>
 
@@ -168,10 +162,6 @@ Join the Telegram community to discuss and collaborate among enthusiasts"
           target="_blank"
         >
           Contribute
-        </a>
-
-        <a href="https://t.me/MockupMirror" target="_blank">
-          Join the community on Telegram
         </a>
 
         <a href="https://buymeacoffee.com/nusry" target="_blank">
