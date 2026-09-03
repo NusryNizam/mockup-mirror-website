@@ -158,7 +158,11 @@ Lightweight and performant Android and web application"
         </a>
 
         <br />
-        <a href="https://nusrynizam.com" target="_blank" className="caption">
+        <a
+          href="https://github.com/nusrynizam"
+          target="_blank"
+          className="caption"
+        >
           Designed and developed by Nusry
         </a>
       </footer>
