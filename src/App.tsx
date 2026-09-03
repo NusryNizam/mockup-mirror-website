@@ -5,7 +5,6 @@ import Spacer from "./components/Spacer";
 import demoVideo from "./assets/videos/demo.webm";
 import logo from "./assets/logo.svg";
 import Github from "./assets/icons/github.svg";
-import Telegram from "./assets/icons/telegram.svg";
 import Close from "./assets/icons/close.svg";
 import { useCallback, useRef } from "react";
 import productDemo from "./assets/videos/product-demo.webm";
@@ -43,16 +42,6 @@ function App() {
       <nav className="nav">
         <img src={logo} />
         <div className="socials">
-          <a
-            href="https://t.me/MockupMirror"
-            target="_blank"
-            style={{
-              height: 24,
-            }}
-          >
-            <img src={Telegram} width={24} height={24} />
-          </a>
-
           <a
             href="https://github.com/NusryNizam/mockup-mirror-mobile"
             target="_blank"
