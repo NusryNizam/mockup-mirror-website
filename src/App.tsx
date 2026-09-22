@@ -6,8 +6,12 @@ import demoVideo from "./assets/videos/demo.webm";
 import logo from "./assets/logo.svg";
 import Github from "./assets/icons/github.svg";
 import Close from "./assets/icons/close.svg";
+import PlayBadge from "./assets/images/play.svg";
 import { useCallback, useRef } from "react";
 import productDemo from "./assets/videos/product-demo.webm";
+
+const PLAY_STORE_LINK =
+  "https://play.google.com/store/apps/details?id=com.nusrynizam.mockupmirror";
 
 const RELEASE_LINK =
   "https://github.com/NusryNizam/mockup-mirror-mobile/releases/latest";
@@ -70,11 +74,15 @@ function App() {
           <Spacer height={24} />
 
           <div className="cta-container">
-            <a href={RELEASE_LINK} target="_blank">
-              <Button
-                variant="primary"
-                text="Download Now"
-                style={{ width: "100%" }}
+            <a
+              href={PLAY_STORE_LINK}
+              target="_blank"
+              className="play-badge-link"
+            >
+              <img
+                src={PlayBadge}
+                alt="Get it on Google Play"
+                className="play-badge"
               />
             </a>
             <Button
@@ -86,7 +94,12 @@ function App() {
 
           <Spacer height={8} />
 
-          <div className="caption light">It's free and open-source</div>
+          <div className="caption light">
+            It's free and open-source ·{" "}
+            <a href={RELEASE_LINK} target="_blank" className="apk-link">
+              Download APK instead
+            </a>
+          </div>
         </div>
         <div className="video-container">
           <video src={demoVideo} autoPlay={true} loop={true} muted={true} />
@@ -138,9 +151,18 @@ Lightweight and performant Android and web application"
         <div className="title sora">
           Convinced? Why don't you download and see for yourself?
         </div>
-        <a href={RELEASE_LINK} target="_blank">
-          <Button variant="primary" text="Download Now" />
-        </a>
+        <div className="banner-cta">
+          <a href={PLAY_STORE_LINK} target="_blank" className="play-badge-link">
+            <img
+              src={PlayBadge}
+              alt="Get it on Google Play"
+              className="play-badge"
+            />
+          </a>
+          <a href={RELEASE_LINK} target="_blank" className="apk-link caption">
+            Download APK instead
+          </a>
+        </div>
       </section>
 
       <Spacer height={72} />

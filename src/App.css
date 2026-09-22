@@ -30,6 +30,15 @@
   gap: 0.75rem;
 }
 
+.play-badge-link {
+  display: inline-flex;
+}
+
+.play-badge {
+  min-height: 46.4px;
+  width: auto;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -53,6 +62,49 @@
   line-height: 130%;
 }
 
+.banner-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.banner-cta .play-badge-link {
+  position: relative;
+  padding: 0.6rem 0.9rem;
+  line-height: 0;
+}
+
+.banner-cta .play-badge-link::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  left: -30px;
+  background: radial-gradient(
+    white,
+    rgba(255, 255, 255, 0.4) 1%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  filter: blur(14px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.banner-cta .play-badge-link .play-badge {
+  position: relative;
+  z-index: 1;
+}
+
+.apk-link {
+  color: inherit;
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.banner-cta .apk-link {
+  color: white;
+}
+
 video {
   max-height: 640px;
 }
@@ -70,6 +122,10 @@ video {
     padding: 2rem 2rem;
   }
 
+  .banner-cta {
+    align-items: flex-start;
+  }
+
   .video-container {
     width: 100%;
   }
@@ -83,6 +139,10 @@ video {
     width: 100%;
     min-width: 600px;
   }
+
+  .banner-cta .play-badge-link {
+    padding-left: 0;
+  }
 }
 
 @media screen and (width < 600px) {
@@ -90,9 +150,11 @@ video {
     display: flex;
     flex-direction: column;
   }
+}
 
+@media screen and (width < 430px) {
   .cta-container {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
