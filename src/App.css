@@ -150,6 +150,10 @@ video {
     display: flex;
     flex-direction: column;
   }
+
+  #root {
+    padding: 1rem;
+  }
 }
 
 @media screen and (width < 430px) {
